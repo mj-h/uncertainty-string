@@ -14,16 +14,6 @@
       "console": "integratedTerminal",
       "sourceMaps": true,
       "internalConsoleOptions": "neverOpen"
-    },
-    {
-      "name": "Debug ANTLR4 grammar",
-      "type": "antlr-debug",
-      "request": "launch",
-      "input": "grammar/input.txt",
-      "grammar": "grammar/calclang.g4",
-      "startRule": "statement",
-      "printParseTree": true,
-      "visualParseTree": true
     }
   ]
 }
