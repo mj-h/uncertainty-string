@@ -11,7 +11,7 @@ npm install uncertainty-string
 Usage:
 
 ```js
-import {UncertaintyString} from uncertainty-string;
+const { UncertaintyString } = require("uncertainty-string")
 
 let [value, uncertainty] = UncertaintyString.toNumbers("1.234(56)");
 // -> value       = 1.234
@@ -55,6 +55,7 @@ Things To Do
 - [x] write tests for the class 
 - [x] write simple webpage for test-driving the module
 - [x] configure dependabot
+- [ ] publish test-page as GitHub-pages-page (including running webpack?)
 - [ ] publish as npm package
 - [ ] write GitHub action that publishes npm package
 
