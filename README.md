@@ -44,19 +44,19 @@ For a full list of examples, see the [test file](test/UncertaintyString.test.ts)
 
 Things To Do
 ------------
-+ write Readme
-+ start npm package
-+ add typescript
-+ configure auto-styling
-+ configure linter
-- start GitHub project
-- configure pipeline on GitHub
-+ write class that can interpret the string "123.5(23)"
-+ write tests for the class 
-- write simple webpage for test-driving the module
-- configure dependabot
-- publish as npm package
-- write GitHub action that publishes npm package
+- [x] write Readme
+- [x] start npm package
+- [x] add typescript
+- [x] configure auto-styling
+- [x] configure linter
+- [x] start GitHub project
+- [x] configure pipeline on GitHub
+- [x] write class that can interpret the string "123.5(23)"
+- [x] write tests for the class 
+- [x] write simple webpage for test-driving the module
+- [x] configure dependabot
+- [ ] publish as npm package
+- [ ] write GitHub action that publishes npm package
 
 
 Ideas for the future
