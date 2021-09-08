@@ -2,6 +2,9 @@ Uncertainty String
 ==================
 
 A module for handling physics-style uncertainty-strings, like 1.873(34). 
+You can see it in action in this playground: 
+[https://mj-h.github.io/uncertainty-string/](https://mj-h.github.io/uncertainty-string/)
+
 Install with 
 
 ```sh
@@ -39,5 +42,5 @@ page 1 of [this article](https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.12
 
 Examples
 --------
-For a full list of examples, see the [test file](test/UncertaintyString.test.ts).
-
+For a full list of examples, see the [test file](test/UncertaintyString.test.ts) 
+or play with `UncertaintyString` on the [playground](https://mj-h.github.io/uncertainty-string/)

@@ -21,6 +21,7 @@ Things To Do
 - [ ] write GitHub action that publishes npm package
 - [x] Split Readme by moving Things To Do, etc, to PROJECT_LOG.md  
 - [ ] Move TTD to GitHub issues (GITHUB ALL THE WAY)
+- [ ] Add flair to GitHub repo
 
 
 Ideas for the future
