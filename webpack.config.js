@@ -3,7 +3,7 @@ path = require('path');
 module.exports = {
   entry: './src/',
   output: {
-    path: path.resolve(__dirname, 'examples/uncert-str'),
+    path: path.resolve(__dirname, 'docs'),
     filename: 'uncertstr.js',
     library: 'UncertStr',
   },
