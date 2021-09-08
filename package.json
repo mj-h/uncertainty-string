@@ -1,0 +1,35 @@
+{
+  "name": "uncertainty-string",
+  "version": "1.0.0",
+  "description": "A module for handling physics-style uncertainty-strings, like 1.873(34)",
+  "main": "index.js",
+  "scripts": {
+    "clean": "node -p \"require('fs').existsSync('dist') && require('fs').rmdirSync('dist', {recursive: true})\"",
+    "build": "npm run clean && tsc",
+    "start": "npm run build -- -w",
+    "test": "mocha -r ts-node/register test/**/*.test.ts",
+    "lint": "eslint \"src/**/*.{js,ts}\"",
+    "lint-fix": "eslint \"src/**/*.{js,ts}\" --quiet --fix",
+    "check-format": "prettier --check \"src/**/*.ts\"",
+    "bundle-example": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.7.13",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "mocha": "^9.1.1",
+    "prettier": "^2.3.2",
+    "ts-loader": "^9.2.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
+  }
+}

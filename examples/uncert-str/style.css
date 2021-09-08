@@ -1,0 +1,113 @@
+/* Simple reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: rgb(0, 123, 224);
+}
+
+.topbar {
+  width: 100%;
+  line-height: 4rem;
+  padding-left: 4rem;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.playground-item {
+  font: 1rem Arial;
+  width: 100%;
+  max-width: 800px;
+  padding: 0.5rem;
+  background-color: #f1f1f1;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  font-family: monospace;
+}
+
+.input-row {
+  margin-top: 1rem;
+}
+
+.input-field {
+  padding-right: 1rem;
+  margin-top: 1rem;
+}
+
+input {
+  font-family: monospace;
+}
+
+.output-row {
+  font-family: monospace;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.output-field {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .topbar {
+    line-height: 3rem;
+    padding-left: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .playground-item{
+    margin-top: 2rem;
+  }
+
+  .input-field {
+    width: 100%;
+    display: block;
+    padding-right: auto;
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+  .input-field > label {
+    width: 8rem;
+    display: inline-block;
+  }
+
+  .output-row {
+    text-align: right;
+    padding-right: 1rem;
+  }
+}
