@@ -17,6 +17,7 @@ async function checkFromNumbers(val: number, uncert: number, strExpected: string
   });
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function todoFromNumbers(val: number, uncert: number, strExpected: string): Promise<void> {
   xit(val + ', ' + uncert + ' -> ' + strExpected, () => {
     const str = UncertaintyString.fromNumbers(val, uncert);
