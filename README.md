@@ -56,7 +56,7 @@ Things To Do
 - [x] write simple webpage for test-driving the module
 - [x] configure dependabot
 - [ ] publish test-page as GitHub-pages-page (including running webpack?)
-- [ ] publish as npm package
+- [x] publish as npm package
 - [ ] write GitHub action that publishes npm package
 
 
