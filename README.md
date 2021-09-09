@@ -1,3 +1,5 @@
+![full-verify](https://github.com/mj-h/uncertainty-string/.github/workflows/full-verify.yml/bade.svg)
+
 Uncertainty String
 ==================
 
