@@ -42,5 +42,24 @@ page 1 of [this article](https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.12
 
 Examples
 --------
+- "123(15)"
+  - mean: 123
+  - uncertainty: 15
+- "12.3(15)"
+  - mean: 12.3
+  - uncertainty: 1.5
+- "1.23(15)"
+  - mean: 1.23
+  - uncertainty: 0.15
+- "0.123(15)"
+  - mean: 0.123
+  - uncertainty: 0.015
+- "1230(150)"
+  - mean: 1230
+  - uncertainty: 150
+- "12300(1500)"
+  - mean: 12300
+  - uncertainty: 1500
+
 For a full list of examples, see the [test file](test/UncertaintyString.test.ts) 
 or play with `UncertaintyString` on the [playground](https://mj-h.github.io/uncertainty-string/)
