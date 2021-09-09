@@ -18,11 +18,11 @@ Things To Do
 - [x] configure dependabot
 - [x] publish test-page as GitHub-pages-page
 - [x] publish as npm package
-- [ ] write GitHub action that publishes npm package
+- [x] write GitHub action that publishes npm package
 - [x] Split Readme by moving Things To Do, etc, to PROJECT_LOG.md  
 - [ ] Move TTD to GitHub issues (GITHUB ALL THE WAY)
-- [ ] Add flair to GitHub repo
-
+- [x] Add badge to GitHub repo
+- [ ] measure code-coverage
 
 Ideas for the future
 --------------------
