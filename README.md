@@ -1,4 +1,5 @@
 ![full-verify](https://github.com/mj-h/uncertainty-string/workflows/Node.js%20CI/badge.svg)
+![npm-publish](https://github.com/mj-h/uncertainty-string/workflows/Node.js%20Package/badge.svg)
 
 Uncertainty String
 ==================
