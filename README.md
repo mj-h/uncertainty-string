@@ -1,4 +1,4 @@
-![full-verify](https://github.com/mj-h/uncertainty-string/.github/workflows/full-verify.yml/bade.svg)
+![full-verify](https://github.com/mj-h/uncertainty-string/workflows/Node.js%20CI/badge.svg)
 
 Uncertainty String
 ==================
