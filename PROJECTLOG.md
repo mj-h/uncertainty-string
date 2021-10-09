@@ -23,6 +23,9 @@ Things To Do
 - [ ] Move TTD to GitHub issues (GITHUB ALL THE WAY)
 - [x] Add badge to GitHub repo
 - [ ] measure code-coverage
+- [ ] Write utility that "hides" floating point errors (only used in test-UI)
+- [x] Use less harsh colors in the UI
+
 
 Ideas for the future
 --------------------

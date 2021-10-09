@@ -19,7 +19,7 @@ function updateUncertaintyString() {
     return;
   }
   let str = UncertStr.UncertaintyString.fromNumbers(mean, uncertainty);
-  uncertStrSpan.innerHTML = str;
+  uncertStrSpan.innerHTML = '"' + str + '"';
 }
 
 meanInput.onkeyup = () => {
