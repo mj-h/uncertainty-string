@@ -16,7 +16,7 @@
     "lint-fix": "eslint \"src/**/*.{js,ts}\" --quiet --fix",
     "check-format": "prettier --check \"src/**/*.ts\"",
     "bundle-example": "webpack",
-    "coverage": "nyc npm run test"
+    "coverage": "nyc --check-coverage npm run test"
   },
   "author": "Martin Höcker",
   "repository": {
