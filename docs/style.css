@@ -32,7 +32,7 @@ html {
 
 body {
   height: 100%;
-  background-color: rgb(0, 123, 224);
+  background-color: rgb(214, 212, 226);
 }
 
 .topbar {
@@ -50,7 +50,7 @@ body {
   width: 100%;
   max-width: 800px;
   padding: 0.5rem;
-  background-color: #f1f1f1;
+  background-color: #f5f5f5;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -63,8 +63,17 @@ body {
 }
 
 .input-field {
-  padding-right: 1rem;
   margin-top: 1rem;
+  width: 100%;
+  display: block;
+  padding-right: auto;
+  text-align: left;
+  padding-left: 5rem;
+}
+
+.input-field > label {
+  width: 8rem;
+  display: inline-block;
 }
 
 input {
@@ -76,10 +85,17 @@ input {
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 100%;
+  text-align: right;
+  padding-right: 5rem;
 }
 
 .output-field {
   font-weight: bold;
+}
+
+/* insert space between input-row and output-row using "adjacent" selector */
+.input-row + .output-row {
+  margin-top: 2.5rem;
 }
 
 @media only screen and (max-width: 600px) {
