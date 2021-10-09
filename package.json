@@ -15,7 +15,8 @@
     "lint": "eslint \"src/**/*.{js,ts}\"",
     "lint-fix": "eslint \"src/**/*.{js,ts}\" --quiet --fix",
     "check-format": "prettier --check \"src/**/*.ts\"",
-    "bundle-example": "webpack"
+    "bundle-example": "webpack",
+    "coverage": "nyc npm run test"
   },
   "author": "Martin Höcker",
   "repository": {
@@ -39,5 +40,8 @@
     "typescript": "^4.4.3",
     "webpack": "^5.58.1",
     "webpack-cli": "^4.9.0"
+  },
+  "dependencies": {
+    "nyc": "^15.1.0"
   }
 }

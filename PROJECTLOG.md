@@ -22,7 +22,7 @@ Things To Do
 - [x] Split Readme by moving Things To Do, etc, to PROJECT_LOG.md  
 - [x] Move TTD to GitHub issues (GITHUB ALL THE WAY)
 - [x] Add badge to GitHub repo
-- [ ] measure code-coverage
+- [x] measure code-coverage
 - [x] Write utility that "hides" floating point errors (only used in test-UI)
 - [x] Use less harsh colors in the UI
 
