@@ -15,5 +15,9 @@
     "text-summary"
   ],
   "all": true,
-  "instrument": true
+  "instrument": true,
+  "branches": 85,
+  "lines": 90,
+  "functions": 90,
+  "statements": 90
 }
