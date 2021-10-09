@@ -47,7 +47,7 @@ function updateMeanAndUncert() {
     let [mean, uncert] = UncertStr.UncertaintyString.toNumbers(str);
     uncertStrInput.style.color = '';
     meanSpan.innerHTML = mean;
-    uncertSpan.innerHTML = uncert;
+    uncertSpan.innerHTML = hideFloatingPointError(uncert);
   } catch {
     uncertStrInput.style.color = 'red';
   }
@@ -61,3 +61,7 @@ uncertStrInput.onblur = () => {
 };
 
 updateMeanAndUncert();
+
+function hideFloatingPointError(num) {
+  return parseFloat(num).toPrecision(2);
+}

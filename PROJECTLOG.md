@@ -20,10 +20,10 @@ Things To Do
 - [x] publish as npm package
 - [x] write GitHub action that publishes npm package
 - [x] Split Readme by moving Things To Do, etc, to PROJECT_LOG.md  
-- [ ] Move TTD to GitHub issues (GITHUB ALL THE WAY)
+- [x] Move TTD to GitHub issues (GITHUB ALL THE WAY)
 - [x] Add badge to GitHub repo
 - [ ] measure code-coverage
-- [ ] Write utility that "hides" floating point errors (only used in test-UI)
+- [x] Write utility that "hides" floating point errors (only used in test-UI)
 - [x] Use less harsh colors in the UI
 
 
