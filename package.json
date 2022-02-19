@@ -1,6 +1,6 @@
 {
   "name": "uncertainty-string",
-  "version": "0.5.5",
+  "version": "0.6.0",
   "description": "A module for handling physics-style uncertainty-strings, like 1.873(34)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
