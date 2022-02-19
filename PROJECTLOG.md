@@ -25,6 +25,11 @@ Things To Do
 - [x] measure code-coverage
 - [x] Write utility that "hides" floating point errors (only used in test-UI)
 - [x] Use less harsh colors in the UI
+- [ ] write `npm run fullverify` and call it in the GitHub workflow. This is
+      best-practice: https://stackoverflow.com/a/59988803
+- [ ] write `bump-and-publish.sh` that bumps + tags + releases (GitHub CLI!)
+- [ ] fix: package is still empty!
+- [ ] fix: nyc should be dev-dependency
 
 
 Ideas for the future
@@ -33,7 +38,7 @@ Ideas for the future
   1.235(17)(22) meters" for cases where systematic and statistical errors are
   stated seperately.
 - let the user specify the decimal-point-handling in the uncertainty-part of 
-  the uncertainty-string: 23.2(2.3) vs. 
+  the uncertainty-string: 23.2(2.3) versus 23.2(23)
 
 
 Setup Log
@@ -77,6 +82,8 @@ Setup Log
   consume.
   - npm install --save-dev webpack webpack-cli ts-loader 
   - node_modules now using ~140MB on disk. Sigh.
+- Added GitHub action that publishes the current version to GitHub whenever
+  there is a new GitHub release.
 
 
 Implementation Log
@@ -91,3 +98,17 @@ Implementation Log
 - since example is in 90%+ of cases going to be opened on mobile, I used simple
   media-query to make it mobile-friendly. The dev-tools in Firefox really 
   helped previewing the result. Kudos to Mozilla!
+
+
+How To Do Things
+----------------
+- How to update the dependencies:
+  - `npm outdated` to view
+  - `npm update` to upgrade (minor/patch only!)
+  - `npm install dep@latest` to upgrade to new major version
+  - alternative: `npx check-updates -u && npm install` to do it in one go.
+- How to create a new release:
+  - bump the version
+  - do a PR, merge it
+  - do a release on GitHub, tag it `v0.5.5` or so
+  - a GitHub action will do the rest
