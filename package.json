@@ -16,7 +16,9 @@
     "lint-fix": "eslint \"src/**/*.{js,ts}\" --quiet --fix",
     "check-format": "prettier --check \"src/**/*.ts\"",
     "bundle-example": "webpack",
-    "coverage": "nyc --check-coverage npm run test"
+    "coverage": "nyc --check-coverage npm run test",
+    "fullverify": "npm run check-format && npm run lint && npm run build && npm run test",
+    "prepr": "npm run fullverify && npm run bundle-example"
   },
   "author": "Martin Höcker",
   "repository": {
