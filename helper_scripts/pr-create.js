@@ -1,9 +1,10 @@
 /**
  * do-pr.js
  *
- * A script that runs typical pre-pr checks and interactively (!) opens a pr.
+ * A script/module that runs typical pre-pr checks and interactively (!) opens a
+ * pr.
  *
- * On a high level, the script:
+ * On a high level, the module:
  * - ensures repo is on feature branch
  * - ensures repo be clean
  * - ennsures "npm run prepr" finishes without errors. It checks
@@ -19,7 +20,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { perform, exit_with_error, log } = require('./_common_lib.js');
 
-prCreate();
+// only run the "main" function if this module is _not_ in the process of being
+// imported
+if (require.main === module) {
+  prCreate();
+}
 
 function prCreate() {
   log('Making sure that we are _not_ on the main branch');
