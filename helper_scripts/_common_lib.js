@@ -18,7 +18,7 @@ const { execSync } = require('child_process');
  *                        should be run "interactivel", i.e. with user input
  * @returns
  */
-function perform(cmd_str, interactive = false) {
+function perform(cmd_str, interactive = false, throwInsteadOfExit = false) {
   try {
     console.log('==========');
     console.log('$: ' + cmd_str);
@@ -37,6 +37,9 @@ function perform(cmd_str, interactive = false) {
     // no need to print e.message -- it contains stderr, which at this point
     // has already been sent to the parent process and been printed to the
     // console!
+    if (throwInsteadOfExit) {
+      throw new Error('Command failed, see output above.');
+    }
     exit_with_error('');
   }
 }

@@ -16,7 +16,7 @@ if (git_status.length != 0) {
 
 let isUpToDate = true;
 try {
-  perform('npm outdated');
+  perform('npm outdated', false, true);
 } catch (error) {
   isUpToDate = false;
 }
@@ -34,7 +34,22 @@ log('Updating dependencies');
 perform('npm update');
 
 log('Checking if packages are still outdated (another major version maybe?');
-perform('npm outdated'); // this will throw if there is an error
+try {
+  perform('npm outdated', false, true); // this will throw if there is an error
+} catch (error) {
+  exit_with_error(`
+  This is an awkward state -- sorry.
+
+  The dependencies are updated, but only the "minor" and "patch" version. Any
+  "major" versions are not yet updated, but they should be. This happens 
+  seldom enough that I did not yet automate the process -- you hae to do it
+  manually.
+
+  Check the output of "npm outdated". Upgrade any major versions with something
+  like "npm install <dependency>@latest". Commit all changes, and the raise
+  a pr using the "pr-create.js" helper script.
+  `);
+}
 
 perform('git add .');
 perform('git commit -m "update dependencies"');
