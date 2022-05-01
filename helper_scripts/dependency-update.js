@@ -38,5 +38,8 @@ perform('npm outdated'); // this will throw if there is an error
 
 perform('git add .');
 perform('git commit -m "update dependencies"');
-
-prCreate();
+try {
+  prCreate();
+} catch (error) {
+  exit_with_error('Failed in pr-create -- fix the errors and run pr-create.js.');
+}
