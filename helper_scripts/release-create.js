@@ -18,4 +18,4 @@ perform('git fetch');
 perform('git merge --ff-only');
 
 log('Doing the release (interactively).');
-perform('git release create', true);
+perform('gh release create', true);
