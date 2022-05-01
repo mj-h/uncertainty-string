@@ -25,11 +25,11 @@ Things To Do
 - [x] measure code-coverage
 - [x] Write utility that "hides" floating point errors (only used in test-UI)
 - [x] Use less harsh colors in the UI
-- [ ] write `npm run fullverify` and call it in the GitHub workflow. This is
+- [x] write `npm run fullverify` and call it in the GitHub workflow. This is
       best-practice: https://stackoverflow.com/a/59988803
 - [ ] write `bump-and-publish.sh` that bumps + tags + releases (GitHub CLI!)
-- [ ] fix: package is still empty!
-- [ ] fix: nyc should be dev-dependency
+- [x] fix: package is still empty!
+- [x] fix: nyc should be dev-dependency
 
 
 Ideas for the future
@@ -84,6 +84,10 @@ Setup Log
   - node_modules now using ~140MB on disk. Sigh.
 - Added GitHub action that publishes the current version to GitHub whenever
   there is a new GitHub release.
+- Wrote "npm run fullverify" and use that inside the "full-verify" action, so
+  that I can easily "run the pipeline" on my dev-machine.
+- Also wrote "npm run prepr" that calls fullverify and also reruns webpack to
+  make sure the example html is up-to-date.
 
 
 Implementation Log
