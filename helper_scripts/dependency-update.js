@@ -14,6 +14,10 @@ if (git_status.length != 0) {
   exit_with_error("repo is not clean! run 'git status' to learn more");
 }
 
+log('Making sure we are up-to-date with origin');
+perform('git fetch');
+perform('git merge --ff-only');
+
 let isUpToDate = true;
 try {
   perform('npm outdated', false, true);
