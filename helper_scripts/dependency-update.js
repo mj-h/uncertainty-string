@@ -37,26 +37,49 @@ perform('git checkout -b upgrade-deps-' + dateStr);
 log('Updating dependencies');
 perform('npm update');
 
-log('Checking if packages are still outdated (another major version maybe?');
+log('Checking if packages are still outdated (major versions maybe?)');
+let hasMajorUpdates = false;
 try {
-  perform('npm outdated', false, true); // this will throw if there is an error
+  perform('npm outdated', false, true); // this will throw if there are outdated packages
 } catch (error) {
-  exit_with_error(`
-  This is an awkward state -- sorry.
-
-  The dependencies are updated, but only the "minor" and "patch" version. Any
-  "major" versions are not yet updated, but they should be. This happens 
-  seldom enough that I did not yet automate the process -- you hae to do it
-  manually.
-
-  Check the output of "npm outdated". Upgrade any major versions with something
-  like "npm install <dependency>@latest". Commit all changes, and the raise
-  a pr using the "pr-create.js" helper script.
-  `);
+  hasMajorUpdates = true;
+  log('Major version updates detected. Updating to latest major versions...');
+  
+  // Use npm-check-updates to update package.json to latest versions
+  // First check if ncu is available, if not install it temporarily
+  try {
+    perform('npx --yes npm-check-updates -u', false, true);
+    log('package.json updated. Installing new versions...');
+    perform('npm install');
+    log('Major version updates completed.');
+  } catch (ncuError) {
+    exit_with_error(`
+    Failed to update major versions automatically.
+    
+    You can try manually:
+    1. Install npm-check-updates: npm install -g npm-check-updates
+    2. Run: ncu -u
+    3. Run: npm install
+    4. Commit and create PR
+    
+    Or update packages individually with: npm install <package>@latest
+    `);
+  }
+  
+  // Verify everything is up to date now
+  try {
+    perform('npm outdated', false, true);
+    log('All dependencies are now up to date!');
+  } catch (verifyError) {
+    log('Warning: Some packages may still be outdated. Check manually with "npm outdated"');
+  }
 }
 
 perform('git add .');
-perform('git commit -m "update dependencies"');
+const commitMsg = hasMajorUpdates 
+  ? 'update dependencies (including major versions)'
+  : 'update dependencies';
+perform(`git commit -m "${commitMsg}"`);
 try {
   prCreate();
 } catch (error) {
