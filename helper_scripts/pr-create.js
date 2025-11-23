@@ -7,7 +7,7 @@
  * On a high level, the module:
  * - ensures repo is on feature branch
  * - ensures repo be clean
- * - ennsures "npm run prepr" finishes without errors. It checks
+ * - ensures "npm run prepr" finishes without errors. It checks
  *   - problems through ESLint
  *   - style through prettier
  *   - build-success through tsc
